@@ -1,0 +1,34 @@
+.trusted-by-heading {
+    text-align: center;
+    padding: 20px 0 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.trusted-by-heading .floating-text {
+    font-family: 'Cormorant Garamond', serif;
+    color: #8B4513;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.15);
+    animation: floatText 3s ease-in-out infinite;
+    position: relative;
+    display: inline-block;
+}
+
+@keyframes floatText {
+    0%, 100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(2deg);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .trusted-by-heading .floating-text {
+        font-size: 3rem;
+    }
+}
