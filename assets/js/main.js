@@ -165,4 +165,35 @@
     });
   });
 
+  // Theme toggle functionality
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeToggleLight = document.getElementById('theme-toggle-light');
+  const themeToggleDark = document.getElementById('theme-toggle-dark');
+
+  // Check for saved theme preference
+  const getTheme = () => localStorage.getItem('theme') || 'light';
+  const setTheme = (theme) => {
+    localStorage.setItem('theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+    // Update toggle button icons
+    if (theme === 'dark') {
+      themeToggleLight.style.display = 'inline-block';
+      themeToggleDark.style.display = 'none';
+    } else {
+      themeToggleLight.style.display = 'none';
+      themeToggleDark.style.display = 'inline-block';
+    }
+  };
+
+  // Set initial theme
+  setTheme(getTheme());
+
+  // Handle theme toggle click
+  themeToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    const currentTheme = getTheme();
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+  });
+
 })();

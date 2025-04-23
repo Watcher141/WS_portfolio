@@ -42,7 +42,6 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/logo.png" alt="WorkStation Logo">
         <h1 class="sitename">WorkStation</h1>
       </a>
 
@@ -57,11 +56,15 @@
           <li><a href="#team">Team</a></li>
           <li><a href="blog.html">Insights</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#" id="theme-toggle" aria-label="Toggle theme">
+            <i class="bi bi-sun-fill" id="theme-toggle-light" style="display: none;"></i>
+            <i class="bi bi-moon-fill" id="theme-toggle-dark"></i>
+          </a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="#contact">Get a Quote</a>
+      
     </div>
   </header>
 
@@ -88,71 +91,6 @@
 
     </section>
     <!-- /Hero Section -->
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
-      <div class="container-fluid px-0" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 8000,
-              "autoplay": {
-                "delay": 0,
-                "disableOnInteraction": false,
-                "pauseOnMouseEnter": false
-              },
-              "slidesPerView": "auto",
-              "spaceBetween": 60,
-              "grabCursor": false,
-              "centeredSlides": false,
-              "allowTouchMove": false,
-              "freeMode": {
-                "enabled": true,
-                "momentum": true,
-                "momentumRatio": 0.8,
-                "momentumVelocityRatio": 0.8
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 30
-                },
-                "480": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 40
-                },
-                "768": {
-                  "slidesPerView": 5,
-                  "spaceBetween": 50
-                },
-                "1024": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 60
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <!-- Duplicate slides for continuous flow -->
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.webp" class="img-fluid" alt="" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.webp" class="img-fluid" alt="" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.webp" class="img-fluid" alt="" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.webp" class="img-fluid" alt="" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.webp" class="img-fluid" alt="" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.webp" class="img-fluid" alt="" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.webp" class="img-fluid" alt="" loading="lazy"></div>
-            <!-- Duplicate slides for seamless loop -->
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.webp" class="img-fluid" alt="" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.webp" class="img-fluid" alt="" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.webp" class="img-fluid" alt="" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.webp" class="img-fluid" alt="" loading="lazy"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.webp" class="img-fluid" alt="" loading="lazy"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Clients Section -->
 
     <!-- About Section -->
     <section id="about" class="about section section-bg dark-background">
@@ -418,6 +356,71 @@
         </div>
       </div>
     </section><!-- /Services Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+      <div class="container-fluid px-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 8000,
+              "autoplay": {
+                "delay": 0,
+                "disableOnInteraction": false,
+                "pauseOnMouseEnter": false
+              },
+              "slidesPerView": "auto",
+              "spaceBetween": 60,
+              "grabCursor": false,
+              "centeredSlides": false,
+              "allowTouchMove": false,
+              "freeMode": {
+                "enabled": true,
+                "momentum": true,
+                "momentumRatio": 0.8,
+                "momentumVelocityRatio": 0.8
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 30
+                },
+                "480": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 40
+                },
+                "768": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 50
+                },
+                "1024": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 60
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <!-- Duplicate slides for continuous flow -->
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.webp" class="img-fluid" alt="" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.webp" class="img-fluid" alt="" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.webp" class="img-fluid" alt="" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.webp" class="img-fluid" alt="" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.webp" class="img-fluid" alt="" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.webp" class="img-fluid" alt="" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.webp" class="img-fluid" alt="" loading="lazy"></div>
+            <!-- Duplicate slides for seamless loop -->
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.webp" class="img-fluid" alt="" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.webp" class="img-fluid" alt="" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.webp" class="img-fluid" alt="" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.webp" class="img-fluid" alt="" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.webp" class="img-fluid" alt="" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Clients Section -->
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
