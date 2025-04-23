@@ -435,6 +435,30 @@ h6 {
   }
 }
 
+.navmenu #theme-toggle {
+  font-size: 20px;
+  padding: 18px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.navmenu #theme-toggle:hover {
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] .navmenu #theme-toggle:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 1200px) {
+  .navmenu #theme-toggle {
+    padding: 10px 15px;
+  }
+}
+
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
