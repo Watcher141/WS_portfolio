@@ -590,6 +590,62 @@ h6 {
   }
 }
 
+/* Improved Mobile Navigation */
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 9998;
+  }
+
+  .navmenu {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.3s;
+    z-index: 9997;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .navmenu.active {
+    top: 0;
+    overflow-y: auto;
+  }
+
+  .navmenu ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 45px;
+    left: 15px;
+    padding: 10px 0;
+    overflow-y: auto;
+    transition: 0.3s;
+  }
+
+  .navmenu ul > li {
+    margin: 15px 20px;
+  }
+
+  .navmenu ul > li > a {
+    display: block;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0;
+  }
+
+  .navmenu ul > li > a:hover {
+    color: #fff;
+  }
+}
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -2732,4 +2788,244 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+/* Responsive Typography */
+:root {
+  --fluid-min-width: 320;
+  --fluid-max-width: 1200;
+  --fluid-min-size: 14;
+  --fluid-max-size: 16;
+  --fluid-min-ratio: 1.2;
+  --fluid-max-ratio: 1.25;
+}
+
+@media screen and (min-width: 320px) {
+  :root {
+    --fluid-size: calc(var(--fluid-min-size) * 1px + (var(--fluid-max-size) - var(--fluid-min-size)) * ((100vw - (var(--fluid-min-width) * 1px)) / (var(--fluid-max-width) - var(--fluid-min-width))));
+  }
+  
+  body {
+    font-size: var(--fluid-size);
+    line-height: calc(var(--fluid-size) * var(--fluid-min-ratio));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: calc(var(--fluid-max-size) * 1px);
+    line-height: calc(var(--fluid-max-size) * var(--fluid-max-ratio));
+  }
+}
+
+/* Responsive Image Handling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Spacing */
+@media (max-width: 768px) {
+  section, .section {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  section, .section {
+    padding: 30px 0;
+  }
+  
+  .section-title {
+    padding-bottom: 30px;
+  }
+}
+
+/* Responsive Grid Layout */
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+@media (max-width: 768px) {
+  .row > [class*='col-'] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Responsive Cards */
+.card {
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive Images */
+.img-fluid-height {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .img-fluid-height {
+    height: 200px;
+  }
+}
+
+/* Responsive Tables */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Improved Form Elements */
+input, 
+textarea, 
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  input, 
+  textarea, 
+  select {
+    padding: 0.5rem;
+  }
+}
+
+/* Responsive Buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Menu Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Container Widths */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  /* Improved Header Spacing */
+  .header {
+    padding: 15px 0;
+  }
+  
+  /* Adjusted Hero Section */
+  .hero {
+    min-height: calc(100vh - 80px);
+    padding: 60px 0;
+  }
+  
+  /* Stack Grid Items */
+  .portfolio .portfolio-item,
+  .services .service-item,
+  .team .team-member {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Optimize Typography */
+  h1, .h1 { font-size: calc(1.375rem + 1.5vw); }
+  h2, .h2 { font-size: calc(1.325rem + 0.9vw); }
+  h3, .h3 { font-size: calc(1.275rem + 0.3vw); }
+  
+  /* Adjust Buttons */
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Stack Header Elements */
+  .header .logo,
+  .header .btn-getstarted {
+    margin: 10px 0;
+  }
+  
+  /* Optimize Mobile Forms */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input, 
+  textarea, 
+  select {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+  .card:hover,
+  .portfolio-item:hover,
+  .service-item:hover {
+    transform: none;
+  }
+  
+  .navmenu a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* High DPI Screen Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
 }

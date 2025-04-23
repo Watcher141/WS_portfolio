@@ -196,4 +196,39 @@
     setTheme(newTheme);
   });
 
+  // Responsive header handling
+  function toggleMobileMenu() {
+    document.querySelector('body').classList.toggle('mobile-nav-active');
+    this.classList.toggle('bi-list');
+    this.classList.toggle('bi-x');
+  }
+
+  // Add slide-in animation for mobile menu
+  function mobileNavAnimation() {
+    const navMenu = document.querySelector('.navmenu ul');
+    if (navMenu) {
+      navMenu.style.animation = 'slideIn 0.3s ease-out forwards';
+    }
+  }
+
+  // Handle mobile menu close on resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 991) {
+      document.querySelector('body').classList.remove('mobile-nav-active');
+      document.querySelector('.mobile-nav-toggle').classList.remove('bi-x');
+      document.querySelector('.mobile-nav-toggle').classList.add('bi-list');
+    }
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (document.querySelector('body').classList.contains('mobile-nav-active') && 
+        !e.target.closest('.navmenu') && 
+        !e.target.closest('.mobile-nav-toggle')) {
+      document.querySelector('body').classList.remove('mobile-nav-active');
+      document.querySelector('.mobile-nav-toggle').classList.remove('bi-x');
+      document.querySelector('.mobile-nav-toggle').classList.add('bi-list');
+    }
+  });
+
 })();
