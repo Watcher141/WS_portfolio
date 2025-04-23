@@ -32,3 +32,38 @@
         font-size: 3rem;
     }
 }
+
+[data-theme="dark"] {
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --link-color: #ffffff;
+  --heading-color: #ffffff;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: var(--heading-color);
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] span {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .text-muted {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] a:not(.btn):not(.nav-link) {
+  color: var(--link-color);
+}
+
+[data-theme="dark"] a:not(.btn):not(.nav-link):hover {
+  color: var(--accent-color);
+}

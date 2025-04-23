@@ -65,9 +65,9 @@
   /* Dark theme variables */
   --dark-background: #1a1a1a;
   --dark-surface: #2d2d2d;
-  --dark-text: #e4e4e4;
+  --dark-text: #ffffff;
   --dark-heading: #ffffff;
-  --dark-muted: #888888;
+  --dark-muted: #cccccc;
   --dark-border: #404040;
 
   /* Common variables */
@@ -91,6 +91,35 @@
   --heading-color: var(--dark-heading);
   --muted-color: var(--dark-muted);
   --border-color: var(--dark-border);
+  --default-color: #ffffff;
+}
+
+[data-theme="dark"] .blog-posts .title a {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .blog-posts .meta-top {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .blog-posts .meta-top a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] .categories-widget ul a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] .recent-posts-widget .post-item h4 a {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .tags-widget ul a {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /*--------------------------------------------------------------
