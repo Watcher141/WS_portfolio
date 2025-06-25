@@ -67,3 +67,26 @@
 [data-theme="dark"] a:not(.btn):not(.nav-link):hover {
   color: var(--accent-color);
 }
+
+/* Reduce gap between client logos in the client section by 30% */
+#clients .swiper-wrapper {
+  gap: 20px !important; /* 60px * 0.7 = 42px, 30% less */
+}
+#clients .swiper-slide {
+  margin-right: 0 !important; /* Remove extra margin if any */
+}
+@media (max-width: 1024px) {
+  #clients .swiper-wrapper {
+    gap: 35px !important; /* 50px * 0.7 = 35px */
+  }
+}
+@media (max-width: 768px) {
+  #clients .swiper-wrapper {
+    gap: 21px !important; /* 30px * 0.7 = 21px */
+  }
+}
+@media (max-width: 480px) {
+  #clients .swiper-wrapper {
+    gap: 14px !important; /* 20px * 0.7 = 14px */
+  }
+}
