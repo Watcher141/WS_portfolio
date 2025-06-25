@@ -2738,3 +2738,57 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+[data-theme="dark"], .dark-background {
+  color: #fff !important;
+}
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] a,
+[data-theme="dark"] .widget-title,
+[data-theme="dark"] .meta-top ul li,
+[data-theme="dark"] .meta-bottom ul li,
+[data-theme="dark"] .content,
+[data-theme="dark"] .footer-about,
+[data-theme="dark"] .footer-links,
+[data-theme="dark"] .footer-newsletter,
+[data-theme="dark"] .copyright,
+[data-theme="dark"] .credits,
+[data-theme="dark"] .blog-details-page,
+[data-theme="dark"] .blog-page {
+  color: #fff !important;
+}
+[data-theme="dark"] .recent-posts-widget .post-item h4,
+[data-theme="dark"] .recent-posts-widget .post-item time {
+  color: #fff !important;
+}
+[data-theme="dark"] .categories-widget ul li a,
+[data-theme="dark"] .tags-widget ul li a {
+  color: #fff !important;
+}
+[data-theme="dark"] .meta-top ul li i,
+[data-theme="dark"] .meta-bottom i {
+  color: #fff !important;
+}
+
+/* Sidebar widget link hover effect for both light and dark mode */
+.categories-widget ul li a:hover,
+.tags-widget ul li a:hover,
+.recent-posts-widget .post-item h4 a:hover {
+  color: #0ea2bd !important;
+  text-decoration: underline;
+  font-weight: 600;
+}
+[data-theme="dark"] .categories-widget ul li a:hover,
+[data-theme="dark"] .tags-widget ul li a:hover,
+[data-theme="dark"] .recent-posts-widget .post-item h4 a:hover {
+  color: #0ea2bd !important;
+  text-decoration: underline;
+  font-weight: 600;
+}
