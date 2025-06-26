@@ -1,3 +1,4 @@
+/* Trusted By Section Heading */
 .trusted-by-heading {
     text-align: center;
     padding: 20px 0 40px;
@@ -26,67 +27,84 @@
     }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .trusted-by-heading .floating-text {
-        font-size: 3rem;
-    }
-}
-
+/* Dark Theme Variables */
 [data-theme="dark"] {
-  --text-primary: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.8);
-  --text-muted: rgba(255, 255, 255, 0.6);
-  --link-color: #ffffff;
-  --heading-color: #ffffff;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --text-muted: rgba(255, 255, 255, 0.6);
+    --link-color: #ffffff;
+    --heading-color: #ffffff;
+    --accent-color: #007bff; /* Added missing accent color */
 }
 
+/* Dark Theme Typography */
 [data-theme="dark"] h1,
 [data-theme="dark"] h2,
 [data-theme="dark"] h3,
 [data-theme="dark"] h4,
 [data-theme="dark"] h5,
 [data-theme="dark"] h6 {
-  color: var(--heading-color);
+    color: var(--heading-color);
 }
 
 [data-theme="dark"] p,
 [data-theme="dark"] li,
 [data-theme="dark"] span {
-  color: var(--text-primary);
+    color: var(--text-primary);
 }
 
 [data-theme="dark"] .text-muted {
-  color: var(--text-muted) !important;
+    color: var(--text-muted) !important;
 }
 
 [data-theme="dark"] a:not(.btn):not(.nav-link) {
-  color: var(--link-color);
+    color: var(--link-color);
 }
 
 [data-theme="dark"] a:not(.btn):not(.nav-link):hover {
-  color: var(--accent-color);
+    color: var(--accent-color);
 }
 
-/* Reduce gap between client logos in the client section by 30% */
+/* Dark Mode Navbar - Consolidated */
+body.dark-mode #header .navmenu ul li a,
+body.dark-mode #header .logo .sitename {
+    color: #fff !important;
+}
+
+/* Dark mode floating text color override */
+[data-theme="dark"] .trusted-by-heading .floating-text {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.15);
+}
+
+/* Client Section - Reduced gaps by 30% */
 #clients .swiper-wrapper {
-  gap: 20px !important; /* 60px * 0.7 = 42px, 30% less */
+    gap: 20px !important; /* Reduced from ~30px */
 }
+
 #clients .swiper-slide {
-  margin-right: 0 !important; /* Remove extra margin if any */
+    margin-right: 0 !important;
 }
+
+/* Responsive Design */
 @media (max-width: 1024px) {
-  #clients .swiper-wrapper {
-    gap: 35px !important; /* 50px * 0.7 = 35px */
-  }
+    #clients .swiper-wrapper {
+        gap: 35px !important; /* Reduced from ~50px */
+    }
 }
+
 @media (max-width: 768px) {
-  #clients .swiper-wrapper {
-    gap: 21px !important; /* 30px * 0.7 = 21px */
-  }
+    .trusted-by-heading .floating-text {
+        font-size: 3rem;
+    }
+    
+    #clients .swiper-wrapper {
+        gap: 21px !important; /* Reduced from ~30px */
+    }
 }
+
 @media (max-width: 480px) {
-  #clients .swiper-wrapper {
-    gap: 14px !important; /* 20px * 0.7 = 14px */
-  }
+    #clients .swiper-wrapper {
+        gap: 14px !important; /* Reduced from ~20px */
+    }
 }

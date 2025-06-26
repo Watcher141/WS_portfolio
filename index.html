@@ -534,31 +534,29 @@
           <script type="application/json" class="swiper-config">
             {
               "loop": true,
-              "speed": 8000,
+              "speed": 800,
               "autoplay": {
-                "delay": 0,
-                "disableOnInteraction": false,
-                "pauseOnMouseEnter": false
+                "delay": 5000,
+                "disableOnInteraction": false
               },
               "slidesPerView": "auto",
-              "spaceBetween": 40,
-              "grabCursor": false,
-              "centeredSlides": false,
-              "allowTouchMove": false,
-              "freeMode": {
-                "enabled": true,
-                "momentum": true,
-                "momentumRatio": 0.8,
-                "momentumVelocityRatio": 0.8
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
               },
               "breakpoints": {
                 "320": {
                   "slidesPerView": 1,
-                  "spaceBetween": 20
+                  "spaceBetween": 40
                 },
                 "1200": {
                   "slidesPerView": 3,
-                  "spaceBetween": 40
+                  "spaceBetween": 20
                 }
               }
             }
@@ -634,7 +632,8 @@
 
           </div>
           <div class="swiper-pagination"></div>
-          <!-- Removed Swiper navigation arrows for infinite scroll effect -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>

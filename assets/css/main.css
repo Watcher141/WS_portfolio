@@ -17,16 +17,10 @@
   --nav-font: "Poppins", sans-serif;
 
   /* Global Colors */
-  --background-color: #ffffff;
-  --default-color: #444444;
-  --heading-color: #111111;
-  --accent-color: #e03a3c;
-  --surface-color: #ffffff;
-  --contrast-color: #ffffff;
   --alt-background-color: #212529;
 
   /* Navigation Menu Colors */
-  --nav-color: #212529;
+  --nav-color: #a1a4a6;
   --nav-hover-color: #e03a3c;
   --nav-mobile-background-color: #ffffff;
   --nav-dropdown-background-color: #ffffff;
@@ -73,16 +67,7 @@
   /* Common variables */
   --accent-color: #0ea2bd;
   --contrast-color: #ffffff;
-  
-  /* Default theme (light) */
-  --background-color: var(--light-background);
-  --surface-color: var(--light-surface);
-  --text-color: var(--light-text);
-  --heading-color: var(--light-heading);
-  --muted-color: var(--light-muted);
-  --border-color: var(--light-border);
 }
-
 /* Dark theme class */
 [data-theme="dark"] {
   --background-color: var(--dark-background);
